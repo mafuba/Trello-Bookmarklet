@@ -4,8 +4,7 @@ javascript:(function(a){window.trelloAppKey="optional";window.trelloIdList="opti
 
 This is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> you can use to create a card in <a href="https://trello.com">Trello</a> from ...
 
- - FogBugz cases
- - JIRA issues
+ - Autotask tickets
  - GitHub issues and commits
  - The selected text from an arbitrary URL
  - ... more?  I'm happy to take pull requests that add support for other websites!
@@ -21,7 +20,7 @@ issues/cases/whatever directly to Trello in a single click.
 
 The card created in Trello will 
 
-- attempt to use the name of the FogBugz/JIRA/GitHub/etc case
+- attempt to use the name of the Autotask/GitHub/etc case
 - include a link to the case in the card description
 - (optionally) include any selected text in the description
 
