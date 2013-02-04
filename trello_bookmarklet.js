@@ -42,7 +42,52 @@
       if(!name) {
         name = selection;
       } else {
-        desc += "\n\n" + selection;
+        desc = 
+"### Description (Expected/Actual Behavior)\n"
++ selection +
+"\
+\
+#### Priority\
+- Severity:\
+- Probability: \
+- Priority: \
+\
+#### Module\
+\
+\
+#### Reporter\
+- Person:\
+- Client: \
+- Username: \
+- Contact information: \
+- Geographic location: \
+\
+#### Time and Date of Occurance\
+\
+\
+#### System Environment (Production, Training, Demo, etc.)\
+\
+\
+#### System Version\
+\
+\
+#### Detailed Steps to Reproduce\
+\
+#### Error Message\
+\
+\
+#### Client Machine Information\
+- Browser and Version: \
+- Resolution: \
+- Processor/Memory: \
+- Domain/Network Info: \
+\
+#### Communication History\
+\
+\
+#### Notes\
+\
+"
       }
     }
 
