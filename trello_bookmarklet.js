@@ -4,6 +4,9 @@
   /* This is run after we've connected to Trello and selected a list */
   var run = function(Trello, idList) {
     var name;
+    var client = "";
+    var createDate = "";
+    
     // Default description is the URL of the page we're looking at
     var desc = location.href;
 
@@ -21,6 +24,8 @@
       
       // We're looking at an Autotask issue
       name = $(".ticket_main_info .title").text().trim();
+      client = $(".account_info .name").text().trim();
+      createDate = $(".ticket_main_info .created_by").text().trim();
 
     } else {
 
@@ -35,6 +40,8 @@
       selection = ""+window.getSelection();
     } else if(document.selection && document.selection.createRange) {
       selection = document.selection.createRange().text;
+    } else if ($("#descrip_inner").length) {
+      selection = $("#descrip_inner").text();
     }
 
     // If they've selected text, add it to the name/desc of the card
@@ -57,14 +64,14 @@
 \
 #### Reporter\
 - Person:\
-- Client: \
-- Username: \
+- Client: " + client +
+"\n- Username: \
 - Contact information: \
 - Geographic location: \
 \
-#### Time and Date of Occurance\
-\
-\
+#### Time and Date of Occurance\n"
++ createDate +
+"\n\
 #### System Environment (Production, Training, Demo, etc.)\
 \
 \
@@ -72,6 +79,7 @@
 \
 \
 #### Detailed Steps to Reproduce\
+\
 \
 #### Error Message\
 \
@@ -87,7 +95,7 @@
 \
 #### Notes\
 \
-"
+";
       }
     }
 
